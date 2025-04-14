@@ -1,0 +1,34 @@
+[build]
+# Para proyecto Node.js estándar (sin compilación)
+command = "npm install --omit=dev"
+
+[deploy]
+# Comando para migraciones de base de datos (si aplica)
+preDeployCommand = "npm run migrate"
+
+# Comando de inicio
+startCommand = "npm start"
+
+# Rutas a monitorear para cambios
+watchPatterns = [
+  "src/**",
+  "index.js",
+  "package.json",
+  "package-lock.json"
+]
+
+[variables]
+# Variables de entorno requeridas
+DATABASE_URL = { required = true }
+PORT = "3000"
+JWT_SECRET = { required = true }
+NODE_ENV = "production"
+CORS_ORIGIN = "https://trends-marketplace.netlify.app"
+ALLOWED_ORIGINS = "https://trends-marketplace.netlify.app"
+
+[healthcheck]
+# Configuración opcional de health check
+path = "/health"
+port = 3000
+timeout = 10
+interval = 30

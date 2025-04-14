@@ -1,0 +1,13 @@
+PARA REALIZAR EL TESTING
+
+1. npm install jest
+
+2. Modificar script test del package.json
+    estaba en "test": "tests"
+    ahora debe estar en "test": "jest"
+
+3. Agregar código de test
+
+4. npm run test
+
+.

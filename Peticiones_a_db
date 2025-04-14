@@ -1,0 +1,44 @@
+Registrar nuevo usuario:
+POST http://localhost:3000/registro 
+{
+    "email": "nuevo_usuario@ejemplo.com",
+    "password": "contraseñaSegura123",
+    "nombre": "María González",
+    "direccion": "Avenida Principal 456, Ciudad, País"
+}
+
+Crear nuevo producto:
+POST http://localhost:3000/productos
+{
+    "titulo": "Camiseta Deportiva",
+    "descripcion": "Camiseta de algodón 100%, ideal para actividades deportivas",
+    "precio": 29.99,
+    "categoria_id": 2,
+    "size": "M",
+    "stock": 50,
+    "imagen": "https://ejemplo.com/camiseta-deportiva.jpg",
+    "vendedor_id": 1
+}
+Agregar producto al carrito:
+POST http://localhost:3000/carrito
+{
+    "usuario_id": 1,
+    "producto_id": 3,
+    "cantidad": 2
+}
+Crear nueva categoria:
+POST http://localhost:3000/categorias
+{
+    "nombre": "Electrónica"
+}
+Crear nuevo tipo de usuario:
+POST http://localhost:3000/tipo-usuario
+{
+    "nombre": "Administrador"
+}
+Autenticar un usuario (Login):
+POST http://localhost:3000/login
+{
+    "email": "usuario@ejemplo.com",
+    "password": "contraseñaSegura123"
+}
